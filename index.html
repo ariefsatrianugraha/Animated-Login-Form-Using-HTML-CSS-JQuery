@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    
+    <form action="index.html" method="port" class="login-form">
+        <h1>LOGIN</h1>
+
+        <div class="txtinput">
+            <input type="text">
+            <span data-placeholder="Username"></span>
+        </div>
+
+        <div class="txtinput">
+            <input type="password">
+            <span data-placeholder="Password"></span>
+        </div>
+
+        <button type="submit" class="logbtn">LOGIN</button>
+
+        <div class="bottom-text">
+            Don't have account? <a href="">Sign Up</a>
+        </div>
+
+        <div class="name">
+            ~ ARIEF SATRIA NUGRAHA ~
+        </div>
+    </form>
+
+    <script>
+        $(".txtinput input").on("focus",function(){
+            $(this).addClass('focus');
+        })
+
+        $(".txtinput input").on("blur",function(){
+            if($(this).val() == '') $(this).removeClass('focus');
+        })
+    </script>
+
+</body>
+</html>
